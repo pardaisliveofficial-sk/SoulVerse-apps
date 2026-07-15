@@ -1,0 +1,41 @@
+; =========================================================================
+; CLOUDFLARE DNS BIND ZONE EXPORT FOR SOULVERSE DIGITAL NETWORK
+; =========================================================================
+;
+; This file lists all the DNS records required for your multi-subdomain
+; ecosystem. When deploying on Cloudflare Pages, you can use these records
+; to point your root domain and all 14 subdomains to your pages deployment.
+;
+; INSTRUCTIONS:
+; 1. Replace "projectdomain.com" with your actual registered domain name.
+; 2. Replace "soulverse-ecosystem.pages.dev" with your actual Cloudflare Pages URL.
+; 3. Import this file directly into your Cloudflare DNS console, or copy
+;    the records individually.
+;
+; TTL is set to Auto (1) for Cloudflare Proxied (orange-clouded) records.
+
+$ORIGIN projectdomain.com.
+$TTL 3600
+
+; --- Root Domain CNAME (Points to your Cloudflare Pages deployment) ---
+@                  IN CNAME   soulverse-ecosystem.pages.dev.
+
+; --- Subdomain CNAME Records ---
+store              IN CNAME   soulverse-ecosystem.pages.dev.
+sehrlive           IN CNAME   soulverse-ecosystem.pages.dev.
+dramaverse         IN CNAME   soulverse-ecosystem.pages.dev.
+cardverse          IN CNAME   soulverse-ecosystem.pages.dev.
+soulstudio         IN CNAME   soulverse-ecosystem.pages.dev.
+postgen            IN CNAME   soulverse-ecosystem.pages.dev.
+quran              IN CNAME   soulverse-ecosystem.pages.dev.
+developer          IN CNAME   soulverse-ecosystem.pages.dev.
+docs               IN CNAME   soulverse-ecosystem.pages.dev.
+support            IN CNAME   soulverse-ecosystem.pages.dev.
+admin              IN CNAME   soulverse-ecosystem.pages.dev.
+api                IN CNAME   soulverse-ecosystem.pages.dev.
+cdn                IN CNAME   soulverse-ecosystem.pages.dev.
+blog               IN CNAME   soulverse-ecosystem.pages.dev.
+
+; --- Email Delivery / SPF & DMARC (Bonus Security Hardening) ---
+@                  IN TXT     "v=spf1 include:_spf.mx.cloudflare.net ~all"
+_dmarc             IN TXT     "v=DMARC1; p=quarantine; pct=100"

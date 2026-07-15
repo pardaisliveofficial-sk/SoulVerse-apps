@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Brand colors remapped from purple to Professional Polish blue */
+  --color-brand-50: #f0f6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+  
+  /* Accent green/cyber colors mapped to a clean emerald/teal */
+  --color-cyber-500: #10b981;
+  --color-cyber-600: #059669;
+
+  /* Theme-specific deep grays and blacks */
+  --color-dark-800: #121214;
+  --color-dark-900: #0a0a0c;
+  --color-dark-950: #050505;
+
+  /* Redefining Tailwind core grays to enforce the professional dark theme globally */
+  --color-gray-950: #050505;
+  --color-gray-900: #0a0a0c;
+  --color-gray-850: #121214;
+  --color-gray-800: #16161a;
+  --color-gray-750: #1f1f23;
+  --color-gray-700: #2a2a2e;
+  --color-gray-600: #475569;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #050505;
+  color: #f8fafc;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling matching Professional Polish theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2e;
+}
+
+/* Elegant dark sleek panels */
+.glass-panel {
+  background: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 31, 35, 0.6);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 22, 26, 0.9);
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
